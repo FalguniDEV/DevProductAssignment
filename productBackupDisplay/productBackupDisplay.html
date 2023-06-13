@@ -1,0 +1,25 @@
+<template>
+  <template if:true={product}>
+    <table class="red-table">
+      <thead>
+        <tr>
+          <th colspan="2" style="background-color: red; color: white;">Product Backup Information</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Name</td>
+          <td>{product.Name__c}</td>
+        </tr>
+        <tr>
+          <td>Product External ID</td>
+          <td>{product.Product_External_ID__c}</td>
+        </tr>
+        <tr>
+          <td>Selling Price</td>
+          <td>{product.Selling_Price__c}</td>
+        </tr>
+      </tbody>
+    </table>
+  </template>
+</template>
