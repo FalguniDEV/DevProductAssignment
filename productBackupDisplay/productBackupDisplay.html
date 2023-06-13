@@ -1,0 +1,47 @@
+<template>
+  <template if:true={product}>
+    <table class="red-table" style="border: 1px solid black; border-collapse: collapse; width: 100%;">
+      <thead>
+        <tr>
+          <th colspan="2" style="background-color: red; color: white; border: 1px solid black;">Product Backup Information</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="border: 1px solid black; width: 50%;">Name</td>
+          <td style="border: 1px solid black; text-align: right; width: 50%;">{product.Name__c}</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid black; width: 50%;">Product External ID</td>
+          <td style="border: 1px solid black; text-align: right; width: 50%;">{product.Product_External_ID__c}</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid black; width: 50%;">Selling Price</td>
+          <td style="border: 1px solid black; text-align: right; width: 50%;">{product.Selling_Price__c}</td>
+        </tr>
+      </tbody>
+    </table>
+  </template>
+
+  <br> <!-- Line break between tables -->
+
+  <template if:true={product2}>
+    <table class="green-table" style="border: 1px solid black; border-collapse: collapse; width: 100%;">
+      <thead>
+        <tr>
+          <th colspan="2" style="background-color: green; color: white; border: 1px solid black;">Related Product</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="border: 1px solid black; width: 50%;">Active?</td>
+          <td style="border: 1px solid black; text-align: right; width: 50%;">{product2.IsActive}</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid black; width: 50%;">Created At</td>
+          <td style="border: 1px solid black; text-align: right; width: 50%;">{product2.Created_Date__c}</td>
+        </tr>
+      </tbody>
+    </table>
+  </template>
+</template>
